@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 
 const Produits = mongoose.Schema({
-    _id:String,
+    createdAt: {
+        type: Date,
+        default: Date.now
+    },
     name: String,
     type: String,
     price: String,
